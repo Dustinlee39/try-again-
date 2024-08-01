@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#intro {
+    padding: 2em;
+    text-align: center;
+}
+
+#desktop {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#taskbar .taskbar-item {
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#toggle-theme {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+}
+
+.window {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #999;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    resize: both;
+    overflow: auto;
+}
+
+.title-bar {
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: move;
+}
+
+.window-controls button {
+    background: none;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 10px;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme .window {
+    background-color: #444;
+}
+
+.dark-theme .title-bar {
+    background-color: #555;
+}
+
+.dark-theme .window-controls button {
+    color: #ccc;
+}
+
+.dark-theme header,
+.dark-theme footer {
+    background-color: #222;
+    color: #ccc;
+}
+
+.dark-theme nav ul li a {
+    color: #ccc;
+}
+
+.window.maximized {
+    width: 100% !important;
+    height: calc(100vh - 40px) !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0 !important;
+}
